@@ -119,9 +119,10 @@ body {
 .hero-gallery {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  /* no gap – we’re going to overlap them manually */
+  gap: 0;
   margin-bottom: 1.75rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .hero-image {
@@ -129,7 +130,26 @@ body {
   max-width: 100%;
   height: auto;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  position: relative;
 }
+
+/* Left poster – shifted slightly right and behind */
+.hero-image:nth-child(1) {
+  transform: translateX(50px);
+  z-index: 1;
+}
+
+/* Middle poster – front */
+.hero-image:nth-child(2) {
+  z-index: 3;
+}
+
+/* Right poster – shifted slightly left and between */
+.hero-image:nth-child(3) {
+  transform: translateX(-50px);
+  z-index: 2;
+}
+
 
 .btn-primary {
   display: inline-block;
