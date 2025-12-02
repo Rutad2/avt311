@@ -119,37 +119,37 @@ body {
 .hero-gallery {
   display: flex;
   justify-content: center;
-  /* no gap – we’re going to overlap them manually */
   gap: 0;
   margin-bottom: 1.75rem;
   flex-wrap: nowrap;
 }
 
 .hero-image {
-  width: 260px;
   max-width: 100%;
   height: auto;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
   position: relative;
 }
 
-/* Left poster – shifted slightly right and behind */
+/* LEFT poster – slightly smaller & shifted right */
 .hero-image:nth-child(1) {
-  transform: translateX(50px);
+  width: 230px;        
+  transform: translateX(60px);
   z-index: 1;
 }
 
-/* Middle poster – front */
+/* MIDDLE poster – largest & in front */
 .hero-image:nth-child(2) {
+  width: 260px;      
   z-index: 3;
 }
 
-/* Right poster – shifted slightly left and between */
+/* RIGHT poster – slightly smaller & shifted left */
 .hero-image:nth-child(3) {
-  transform: translateX(-50px);
+  width: 230px;         
+  transform: translateX(-60px);
   z-index: 2;
 }
-
 
 .btn-primary {
   display: inline-block;
