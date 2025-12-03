@@ -455,31 +455,30 @@ body {
    =========================== */
 
 .process-page {
-  background-color: #fffaf5; /* same beige as home & reflection */
+  background-color: #fffaf5;
 }
 
 .process-title {
   margin-top: 2.7rem;
 }
 
-/* intro paragraph under title */
+/* intro paragraph */
 .process-intro {
   max-width: 900px;
   margin: 0 auto 2.3rem;
   font-size: 0.98rem;
   line-height: 1.7;
-  text-align: left;
 }
 
-/* diagram area */
+/* diagram */
 .process-diagram {
   margin-bottom: 3rem;
-  overflow-x: auto; /* just in case on small screens */
+  overflow-x: auto;
 }
 
 .process-steps {
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
   gap: 0;
   min-width: max-content;
@@ -488,14 +487,17 @@ body {
 .process-step {
   background: #f45b3d;
   color: #fff;
-  padding: 0.9rem 1.6rem;
+  padding: 0.9rem 1.7rem;
   font-family: "Oswald", sans-serif;
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   text-align: center;
+  min-width: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  min-width: 180px;
 }
 
 /* arrow between steps */
@@ -514,7 +516,7 @@ body {
   display: none;
 }
 
-/* big bordered text block */
+/* big bordered text box */
 .process-body {
   padding-bottom: 3.5rem;
 }
@@ -527,35 +529,35 @@ body {
   margin: 0 auto;
   font-size: 0.95rem;
   line-height: 1.75;
+  position: relative;
+  overflow: hidden;
 }
 
-/* paragraphs that sit over the red "stripe" on the right */
+/* red highlight words */
+.process-accent {
+  color: #f45b3d;
+}
+
+/* red stripe on right half for the last two paragraphs */
 .process-highlight-paragraph {
   position: relative;
+  z-index: 1;
 }
 
-/* soft red stripe on right half, like your Figma */
 .process-highlight-paragraph::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right,
-              rgba(244, 91, 61, 0) 0%,
-              rgba(244, 91, 61, 0) 50%,
-              rgba(244, 91, 61, 0.2) 100%);
+  background: linear-gradient(
+    to right,
+    rgba(244, 91, 61, 0) 0%,
+    rgba(244, 91, 61, 0) 55%,
+    rgba(244, 91, 61, 0.22) 100%
+  );
   z-index: -1;
 }
 
-/* make sure highlight is behind text */
-.process-text-block {
-  position: relative;
-}
-
-.process-highlight-paragraph {
-  z-index: 1;
-}
-
-/* responsive tweaks */
+/* responsive */
 @media (max-width: 900px) {
   .process-steps {
     flex-direction: column;
