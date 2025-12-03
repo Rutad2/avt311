@@ -399,20 +399,25 @@ body {
 .reflection-bottom::before {
   content: "";
   position: absolute;
-  left: 8%;              /* horizontal placement – tweak if needed */
-  top: -140px;           /* move up/down */
+  left: 8%;
+  top: -140px;
   width: 380px;
   height: 380px;
   border-radius: 50%;
   background: radial-gradient(circle, #f45b3d 0%, rgba(244, 91, 61, 0) 65%);
-  /* no z-index here – let it sit behind the text by default */
+  opacity: 0.45;   /* softer glow */
+  z-index: 0;      /* behind the text layer */
 }
+
 
 .reflection-columns {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2.5rem;
+  position: relative;
+  z-index: 1;   /* text above the glow */
 }
+
 
 .reflection-column p {
   font-size: 0.95rem;
