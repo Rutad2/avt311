@@ -454,21 +454,24 @@ body {
    PROCESS PAGE
    =========================== */
 
+
 .process-page {
-  background-color: #fffaf5;
+  background-color: #fffaf5; /* beige like home */
 }
 
+/* title + intro */
 .process-title {
   margin-top: 2.7rem;
 }
 
-/* intro paragraph */
 .process-intro {
   max-width: 900px;
   margin: 0 auto 2.3rem;
   font-size: 0.98rem;
   line-height: 1.7;
 }
+
+/* ---------- TOP RED BOX DIAGRAM ---------- */
 
 .process-diagram {
   margin-bottom: 3rem;
@@ -479,7 +482,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2.5rem;              /* space between boxes */
+  gap: 3rem;              /* space between boxes */
   min-width: max-content;
 }
 
@@ -500,16 +503,16 @@ body {
   position: relative;
 }
 
-/* grey line + arrow pointing to NEXT box */
+/* thin black line + arrow to NEXT box */
 .process-step::after {
   content: "";
   position: absolute;
   top: 50%;
   right: -40px;
   transform: translateY(-50%);
-  width: 36px;
-  height: 2px;
-  background: #b3b3b3;       /* line */
+  width: 30px;
+  height: 1px;
+  background: #111;          /* line */
 }
 
 .process-step::before {
@@ -517,10 +520,10 @@ body {
   position: absolute;
   top: 50%;
   right: -40px;
-  transform: translate(12px, -50%);
-  border-left: 8px solid #b3b3b3;    /* arrow head */
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
+  transform: translate(30px, -50%);
+  border-left: 7px solid #111;    /* arrow head */
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
 }
 
 /* last box: no arrow */
@@ -529,18 +532,19 @@ body {
   display: none;
 }
 
+/* ---------- WHITE TEXT BOX + GLOW ---------- */
 
 .process-body {
   padding-bottom: 3.5rem;
-  position: relative;           /* for the glow */
+  position: relative;           /* for glow */
 }
 
-/* red glow in bottom-right */
+/* red glow bottom-right behind box */
 .process-body::before {
   content: "";
   position: absolute;
   right: 8%;
-  bottom: -120px;
+  bottom: -140px;
   width: 380px;
   height: 380px;
   border-radius: 50%;
@@ -549,7 +553,7 @@ body {
   z-index: 0;
 }
 
-/* keep the text box above the glow */
+/* white box itself */
 .process-text-block {
   border: 2px solid #111;
   background: #fff;
@@ -559,26 +563,15 @@ body {
   font-size: 0.95rem;
   line-height: 1.75;
   position: relative;
-  z-index: 1;
+  z-index: 1;    /* above the glow */
 }
 
-
-.process-text-block {
-  border: 2px solid #111;
-  background: #fff;
-  padding: 1.6rem 1.8rem 1.9rem;
-  max-width: 1000px;
-  margin: 0 auto;
-  font-size: 0.95rem;
-  line-height: 1.75;
-  position: relative;
-  overflow: hidden;
-}
-
+/* NO special color / gradient on specific words */
 .process-accent {
-  color: #f45b3d;
+  color: inherit;
 }
 
+/* paragraphs behave normally; no gradient overlay */
 .process-highlight-paragraph {
   position: static;
 }
@@ -587,18 +580,26 @@ body {
   content: none;
 }
 
+.process-page .blob-left {
+  display: none;
+}
 
-/* responsive */
+.process-page .blob-right {
+  top: auto;
+  bottom: -180px;
+  right: -150px;
+}
+
+/* ---------- Responsive ---------- */
+
 @media (max-width: 900px) {
   .process-steps {
     flex-direction: column;
+    gap: 0.75rem;
   }
 
-  .process-step::after {
-    display: none;
-  }
-
-  .process-step + .process-step {
-    margin-top: 0.5rem;
+  .process-step::after,
+  .process-step::before {
+    display: none; 
   }
 }
