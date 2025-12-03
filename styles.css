@@ -486,49 +486,51 @@ body {
   min-width: max-content;
 }
 
-/* each red box */
+/* each red box – same size */
 .process-step {
   background: #f45b3d;
   color: #fff;
-  padding: 0.9rem 1.7rem;
+  width: 230px;           /* all the same width */
+  height: 80px;           /* all the same height */
+  padding: 0 1.2rem;
   font-family: "Oswald", sans-serif;
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   text-align: center;
-  min-width: 190px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
 
-/* thin black line + arrow to NEXT box */
-.process-step::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: -40px;
-  transform: translateY(-50%);
-  width: 30px;
-  height: 1px;
-  background: #111;          /* line */
-}
-
+/* grey line between boxes */
 .process-step::before {
   content: "";
   position: absolute;
   top: 50%;
   right: -40px;
-  transform: translate(30px, -50%);
-  border-left: 7px solid #111;    /* arrow head */
+  transform: translateY(-50%);
+  width: 32px;
+  height: 1px;
+  background: #888;
+}
+
+/* small grey arrow head at end of line */
+.process-step::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  transform: translate(32px, -50%);
+  border-left: 7px solid #888;
   border-top: 4px solid transparent;
   border-bottom: 4px solid transparent;
 }
 
-/* last box: no arrow */
-.process-step:last-child::after,
-.process-step:last-child::before {
+/* last box: no connector */
+.process-step:last-child::before,
+.process-step:last-child::after {
   display: none;
 }
 
@@ -539,19 +541,19 @@ body {
   position: relative;           /* for glow */
 }
 
-/* red glow bottom-right behind box */
 .process-body::before {
   content: "";
   position: absolute;
   right: 8%;
-  bottom: -140px;
+  top: 220px;    /* move it up so it sits behind bottom-right of box */
   width: 380px;
   height: 380px;
   border-radius: 50%;
   background: radial-gradient(circle, #f45b3d 0%, rgba(244, 91, 61, 0) 65%);
-  opacity: 0.55;
+  opacity: 0.85;  /* more opaque */
   z-index: 0;
 }
+
 
 /* white box itself */
 .process-text-block {
@@ -566,15 +568,16 @@ body {
   z-index: 1;    /* above the glow */
 }
 
-/* NO special color / gradient on specific words */
+/* make sure no words are red */
 .process-accent {
-  color: inherit;
+  color: inherit !important;
 }
 
-/* paragraphs behave normally; no gradient overlay */
-.process-highlight-paragraph {
-  position: static;
+/* remove any leftover pink gradient behind paragraphs */
+.process-highlight-paragraph::before {
+  content: none !important;
 }
+
 
 .process-highlight-paragraph::before {
   content: none;
