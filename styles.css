@@ -328,22 +328,25 @@ body {
   background-color: #fffaf5;
 }
 
-/* Big centered page title */
+/* big centered "REFLECTION" */
 .page-title {
   font-family: "Oswald", sans-serif;
   font-size: 2.8rem;
   letter-spacing: 0.18em;
   text-align: center;
-  margin: 2.5rem 0 1.8rem;
+  margin: 2.5rem 0 2.2rem;
 }
 
-/* Top two-column intro area */
+/* top area: text left, quote right */
+.reflection-top {
+  padding-bottom: 2.5rem;
+}
+
 .reflection-intro {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   gap: 3rem;
   align-items: flex-start;
-  margin-bottom: 2.8rem;
 }
 
 .reflection-intro-text p {
@@ -351,7 +354,7 @@ body {
   line-height: 1.7;
 }
 
-/* Quote block on the right */
+/* quote block */
 .reflection-quote {
   position: relative;
   font-size: 0.96rem;
@@ -360,7 +363,7 @@ body {
 
 .quote-heading {
   font-family: "Oswald", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   margin-bottom: 0.9rem;
@@ -368,17 +371,17 @@ body {
   z-index: 2;
 }
 
-/* red blob behind quote text */
+/* red glow behind quote */
 .quote-highlight {
   position: absolute;
-  top: 0.3rem;
-  left: 1.5rem;
+  top: -10px;
+  left: 40px;
   width: 260px;
   height: 260px;
   border-radius: 50%;
   background: radial-gradient(circle, #f45b3d 0%, rgba(244, 91, 61, 0) 65%);
   z-index: 1;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .reflection-quote p {
@@ -386,10 +389,11 @@ body {
   z-index: 2;
 }
 
-/* Bottom section with three columns */
+/* bottom strip with 3 columns */
 .reflection-bottom {
   border-top: 2px solid #111;
-  padding: 2.5rem 0 3.5rem;
+  background: #fff;
+  padding: 2.7rem 0 3.5rem;
 }
 
 .reflection-columns {
@@ -405,20 +409,21 @@ body {
 
 .reflection-subtitle {
   font-family: "Oswald", sans-serif;
-  font-size: 1.2rem;
-  letter-spacing: 0.1em;
+  font-size: 1.25rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.8rem;
 }
 
 /* responsive tweaks */
 @media (max-width: 900px) {
   .reflection-intro {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .quote-highlight {
-    left: 0.3rem;
+    left: 10px;
   }
 
   .reflection-columns {
@@ -429,4 +434,3 @@ body {
     font-size: 2.3rem;
   }
 }
-
