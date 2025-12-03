@@ -391,9 +391,9 @@ body {
 
 .reflection-bottom {
   border-top: 2px solid #111;
-  background: #fffaf5;   /* beige, same as rest of page */
+  background: #fffaf5;  
   padding: 2.7rem 0 3.5rem;
-  position: relative;    /* needed for ::before positioning */
+  position: relative;  
 }
 
 .reflection-bottom::before {
@@ -405,8 +405,7 @@ body {
   height: 380px;
   border-radius: 50%;
   background: radial-gradient(circle, #f45b3d 0%, rgba(244, 91, 61, 0) 65%);
-  opacity: 0.45;   /* softer glow */
-  z-index: 0;      /* behind the text layer */
+  z-index: 0;     
 }
 
 
