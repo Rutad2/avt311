@@ -389,12 +389,26 @@ body {
   z-index: 2;
 }
 
-/* bottom strip with 3 columns */
 .reflection-bottom {
   border-top: 2px solid #111;
-  background: #fff;
+  background: #fffaf5;   /* same beige as the rest */
   padding: 2.7rem 0 3.5rem;
+  position: relative;    /* so we can place a blob inside it */
 }
+/* red glow behind the first column on the reflection page */
+.reflection-bottom::before {
+  content: "";
+  position: absolute;
+  left: 10%;
+  top: -130px;  /* adjust up/down to taste */
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #f45b3d 0%, rgba(244, 91, 61, 0) 65%);
+  z-index: -1;
+  opacity: 0.9;
+}
+
 
 .reflection-columns {
   display: grid;
