@@ -119,10 +119,12 @@ body {
 .hero-gallery {
   display: flex;
   justify-content: center;
+  align-items: center;   /* 👈 centers them vertically */
   gap: 0;
   margin-bottom: 1.75rem;
   flex-wrap: nowrap;
 }
+
 
 .hero-image {
   width: 260px;          /* base size */
@@ -130,26 +132,24 @@ body {
   height: auto;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
   position: relative;
-  transform-origin: center bottom;  /* so they shrink/grow up from the bottom */
+  transform-origin: center center;  /* 👈 center instead of bottom */
 }
 
-/* LEFT poster – smaller & shifted, so it looks shorter */
 .hero-image:nth-child(1) {
   transform: translateX(60px) scale(0.88);
   z-index: 1;
 }
 
-/* MIDDLE poster – slightly bigger & in front */
 .hero-image:nth-child(2) {
   transform: translateX(0) scale(1.05);
   z-index: 3;
 }
 
-/* RIGHT poster – smaller & shifted, so it looks shorter */
 .hero-image:nth-child(3) {
   transform: translateX(-60px) scale(0.88);
   z-index: 2;
 }
+
 
 
 .btn-primary {
