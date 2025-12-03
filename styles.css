@@ -319,3 +319,114 @@ body {
     padding-right: 1rem;
   }
 }
+
+/* ===========================
+   REFLECTION PAGE
+   =========================== */
+
+.reflection-page {
+  background-color: #fffaf5;
+}
+
+/* Big centered page title */
+.page-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 2.8rem;
+  letter-spacing: 0.18em;
+  text-align: center;
+  margin: 2.5rem 0 1.8rem;
+}
+
+/* Top two-column intro area */
+.reflection-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: flex-start;
+  margin-bottom: 2.8rem;
+}
+
+.reflection-intro-text p {
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+/* Quote block on the right */
+.reflection-quote {
+  position: relative;
+  font-size: 0.96rem;
+  line-height: 1.7;
+}
+
+.quote-heading {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.9rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* red blob behind quote text */
+.quote-highlight {
+  position: absolute;
+  top: 0.3rem;
+  left: 1.5rem;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #f45b3d 0%, rgba(244, 91, 61, 0) 65%);
+  z-index: 1;
+  opacity: 0.8;
+}
+
+.reflection-quote p {
+  position: relative;
+  z-index: 2;
+}
+
+/* Bottom section with three columns */
+.reflection-bottom {
+  border-top: 2px solid #111;
+  padding: 2.5rem 0 3.5rem;
+}
+
+.reflection-columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.5rem;
+}
+
+.reflection-column p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.reflection-subtitle {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.9rem;
+}
+
+/* responsive tweaks */
+@media (max-width: 900px) {
+  .reflection-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .quote-highlight {
+    left: 0.3rem;
+  }
+
+  .reflection-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .page-title {
+    font-size: 2.3rem;
+  }
+}
+
