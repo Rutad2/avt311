@@ -470,7 +470,6 @@ body {
   line-height: 1.7;
 }
 
-/* diagram */
 .process-diagram {
   margin-bottom: 3rem;
   overflow-x: auto;
@@ -480,10 +479,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0;
+  gap: 2.5rem;              /* space between boxes */
   min-width: max-content;
 }
 
+/* each red box */
 .process-step {
   background: #f45b3d;
   color: #fff;
@@ -500,26 +500,68 @@ body {
   position: relative;
 }
 
-/* arrow between steps */
+/* grey line + arrow pointing to NEXT box */
 .process-step::after {
   content: "";
   position: absolute;
-  right: -24px;
   top: 50%;
+  right: -40px;
   transform: translateY(-50%);
-  border-left: 24px solid #f45b3d;
-  border-top: 16px solid transparent;
-  border-bottom: 16px solid transparent;
+  width: 36px;
+  height: 2px;
+  background: #b3b3b3;       /* line */
 }
 
-.process-step:last-child::after {
+.process-step::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  transform: translate(12px, -50%);
+  border-left: 8px solid #b3b3b3;    /* arrow head */
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+
+/* last box: no arrow */
+.process-step:last-child::after,
+.process-step:last-child::before {
   display: none;
 }
 
-/* big bordered text box */
+
 .process-body {
   padding-bottom: 3.5rem;
+  position: relative;           /* for the glow */
 }
+
+/* red glow in bottom-right */
+.process-body::before {
+  content: "";
+  position: absolute;
+  right: 8%;
+  bottom: -120px;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #f45b3d 0%, rgba(244, 91, 61, 0) 65%);
+  opacity: 0.55;
+  z-index: 0;
+}
+
+/* keep the text box above the glow */
+.process-text-block {
+  border: 2px solid #111;
+  background: #fff;
+  padding: 1.6rem 1.8rem 1.9rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  position: relative;
+  z-index: 1;
+}
+
 
 .process-text-block {
   border: 2px solid #111;
@@ -533,29 +575,18 @@ body {
   overflow: hidden;
 }
 
-/* red highlight words */
 .process-accent {
   color: #f45b3d;
 }
 
-/* red stripe on right half for the last two paragraphs */
 .process-highlight-paragraph {
-  position: relative;
-  z-index: 1;
+  position: static;
 }
 
 .process-highlight-paragraph::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(244, 91, 61, 0) 0%,
-    rgba(244, 91, 61, 0) 55%,
-    rgba(244, 91, 61, 0.22) 100%
-  );
-  z-index: -1;
+  content: none;
 }
+
 
 /* responsive */
 @media (max-width: 900px) {
