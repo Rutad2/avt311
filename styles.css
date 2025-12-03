@@ -125,31 +125,32 @@ body {
 }
 
 .hero-image {
+  width: 260px;          /* base size */
   max-width: 100%;
   height: auto;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
   position: relative;
+  transform-origin: center bottom;  /* so they shrink/grow up from the bottom */
 }
 
-/* LEFT poster – slightly smaller & shifted right */
+/* LEFT poster – smaller & shifted, so it looks shorter */
 .hero-image:nth-child(1) {
-  width: 200px;        
-  transform: translateX(60px);
+  transform: translateX(60px) scale(0.88);
   z-index: 1;
 }
 
-/* MIDDLE poster – largest & in front */
+/* MIDDLE poster – slightly bigger & in front */
 .hero-image:nth-child(2) {
-  width: 260px;      
+  transform: translateX(0) scale(1.05);
   z-index: 3;
 }
 
-/* RIGHT poster – slightly smaller & shifted left */
+/* RIGHT poster – smaller & shifted, so it looks shorter */
 .hero-image:nth-child(3) {
-  width: 200px;         
-  transform: translateX(-60px);
+  transform: translateX(-60px) scale(0.88);
   z-index: 2;
 }
+
 
 .btn-primary {
   display: inline-block;
