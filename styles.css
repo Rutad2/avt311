@@ -612,28 +612,27 @@ body {
 
 .work-page {
   background-color: #fffaf5;
+  padding-top: 4rem;
+  position: relative;
 }
 
-/* position blobs like your Figma */
+/* blobs for WORK page */
 .work-page .blob-left {
+  position: absolute;
   top: 140px;
   left: -150px;
 }
 
 .work-page .blob-right {
+  position: absolute;
   bottom: 220px;
   right: -160px;
 }
 
-/* hero headings */
-.work-hero {
-  padding-bottom: 3rem;
-}
-
-/* Work page hero heading */
+/* HERO: big WORK heading + subtitle */
 .work-hero-header {
-  text-align: center;      /* centers WORK + subtitle */
-  margin-top: 3rem;
+  text-align: center;
+  margin: 4rem auto 3rem;
 }
 
 .work-title {
@@ -641,182 +640,18 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.18em;
   font-size: 3.2rem;
-  margin-bottom: 0.4rem;
+  margin: 0 0 0.4rem;
 }
-
 
 .work-subtitle {
+  font-family: "Nunito Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
   font-size: 0.95rem;
-  margin-top: 0.4rem;
-  text-align: center
+  letter-spacing: 0.05em;
+  margin: 0;
 }
 
-.section-heading {
-  font-family: "Oswald", sans-serif;
-  font-size: 2.3rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  margin-bottom: 1.1rem;
-}
-
-.projects-heading {
-  margin-top: 1.4rem;
-}
-
-/* tabs + search row */
-.work-tabs {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 0.4rem;
-  margin-bottom: 2.3rem;
-}
-
-.tab-links {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.tab-link {
-  background: none;
-  border: none;
-  padding: 0;
-  font-family: "Nunito Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.95rem;
-  cursor: default;
-  color: #111;
-}
-
-.tab-link.active {
-  border-bottom: 2px solid #111;
-  padding-bottom: 0.25rem;
-}
-
-/* search icon on the right */
-.work-search {
-  height: 22px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  min-width: 80px;
-}
-
-.search-icon {
-  width: 14px;
-  height: 14px;
-  border: 2px solid #111;
-  border-radius: 50%;
-  position: relative;
-}
-
-.search-icon::after {
-  content: "";
-  position: absolute;
-  width: 7px;
-  height: 2px;
-  background: #111;
-  transform: rotate(45deg);
-  right: -5px;
-  bottom: -1px;
-}
-
-/* cards grid */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 2.5rem;
-}
-
-.work-card-image img {
-  width: 100%;
-  display: block;
-}
-
-.work-card-title {
-  font-family: "Oswald", sans-serif;
-  font-size: 1.1rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin: 0.65rem 0 0.4rem;
-}
-
-.work-card-text {
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-/* spacing between sections */
-.work-exercises {
-  padding: 3.8rem 0 4rem;
-}
-
-.exercises-heading {
-  margin-bottom: 1.1rem;
-}
-
-/* bottom glow sits under right exercises grid */
-.work-exercises {
-  position: relative;
-}
-
-.work-exercises::before {
-  content: "";
-  position: absolute;
-  right: 5%;
-  bottom: 60px;
-  width: 380px;
-  height: 380px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #f45b3d 0%, rgba(244, 91, 61, 0) 65%);
-  opacity: 0.7;
-  z-index: 0;
-}
-
-.exercises-grid {
-  position: relative;
-  z-index: 1;
-}
-
-/* responsive tweaks */
-@media (max-width: 900px) {
-  .card-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 650px) {
-  .card-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .work-hero-header {
-    justify-content: flex-start;
-  }
-
-  .work-title,
-  .work-subtitle {
-    text-align: left;
-  }
-
-  .work-tabs {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.6rem;
-  }
-
-  .work-search {
-    align-self: flex-end;
-    width: 100%;
-  }
-	
-/* -------- WORK PAGE GRID LAYOUT -------- */
-
-.work-page {
-  padding-top: 4rem;
-}
-
-/* Section headings: "PROJECTS", "EXERCISES" */
+/* Section headings: PROJECTS, EXERCISES */
 .section-heading {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
@@ -826,21 +661,11 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/* big "WORK" title at top */
-.work-title {
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 3.2rem;
-  margin-bottom: 0.4rem;
+.projects-heading {
+  margin-top: 1.4rem;
 }
 
-.work-subtitle {
-  font-size: 0.95rem;
-  margin-bottom: 2.5rem;
-}
-
-/* GRID: 3 columns on desktop, 2 on tablet, 1 on mobile */
+/* GRID: project/exercise cards */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -849,20 +674,7 @@ body {
   margin-top: 2.5rem;
 }
 
-@media (max-width: 1000px) {
-  .card-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 650px) {
-  .card-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* INDIVIDUAL CARDS */
-
 .work-card-image {
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
   background: #ffffff;
@@ -904,6 +716,7 @@ body {
   font-size: 0.8rem;
   line-height: 1.7;
 }
+
 /* ---------- IMAGE GALLERY / SLIDER ---------- */
 
 .image-gallery {
@@ -912,13 +725,13 @@ body {
 }
 
 .image-gallery img {
-  display: none;
+  display: none;        /* hide all by default */
   width: 100%;
   height: auto;
 }
 
 .image-gallery img.active {
-  display: block;
+  display: block;       /* only current one shows */
 }
 
 .gallery-btn {
@@ -939,17 +752,62 @@ body {
   z-index: 2;
 }
 
-.gallery-btn.prev {
-  left: 8px;
-}
-
-.gallery-btn.next {
-  right: 8px;
-}
+.gallery-btn.prev { left: 8px; }
+.gallery-btn.next { right: 8px; }
 
 .gallery-btn:hover {
   background: rgba(0, 0, 0, 0.65);
 }
 
+/* ---------- EXERCISES GLOW ---------- */
 
+.work-exercises {
+  padding: 3.8rem 0 4rem;
+  position: relative;
+}
+
+.exercises-heading {
+  margin-bottom: 1.1rem;
+}
+
+.work-exercises::before {
+  content: "";
+  position: absolute;
+  right: 5%;
+  bottom: 60px;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #f45b3d 0%, rgba(244, 91, 61, 0) 65%);
+  opacity: 0.7;
+  z-index: 0;
+}
+
+.exercises-grid {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 1000px) {
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-hero-header {
+    margin-top: 2.5rem;
+  }
+
+  .work-title,
+  .work-subtitle {
+    text-align: left;
+    padding-inline: 1.5rem;
+  }
 }
