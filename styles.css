@@ -612,7 +612,7 @@ body {
 
 .work-page {
   background-color: #fffaf5;
-  padding-top: 4rem;
+  padding-top: 3.5rem;  
   position: relative;
 }
 
@@ -632,21 +632,21 @@ body {
 /* HERO: big WORK heading + subtitle */
 .work-hero-header {
   text-align: center;
-  margin: 4rem auto 3rem;
+  margin: 3.5rem auto 3rem;
 }
 
 .work-title {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 3.2rem;
+  font-size: 3.5rem;
+  letter-spacing: 0.08em;
   margin: 0 0 0.4rem;
 }
 
 .work-subtitle {
   font-family: "Nunito Sans", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
-  font-size: 0.95rem;
+  font-size: 1.05rem;    
   letter-spacing: 0.05em;
   margin: 0;
 }
@@ -656,7 +656,7 @@ body {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  font-size: 2.3rem;
+  font-size: 2.1rem;     
   margin-top: 3rem;
   margin-bottom: 1.5rem;
 }
@@ -725,13 +725,13 @@ body {
 }
 
 .image-gallery img {
-  display: none;        /* hide all by default */
+  display: none;        
   width: 100%;
   height: auto;
 }
 
 .image-gallery img.active {
-  display: block;       /* only current one shows */
+  display: block;      
 }
 
 .gallery-btn {
@@ -811,28 +811,3 @@ body {
     padding-inline: 1.5rem;
   }
 }
-
-
-body {
-  font-size: 16px;
-}
-
-.work-page {
-  font-size: 1rem; 
-}
-
-.work-page .work-title {
-  font-size: 4rem;   
-  letter-spacing: 0.2em;    
-}
-
-.work-page .section-heading {
-  font-size: 2.6rem;     
-}
-
-.work-page .work-subtitle {
-  font-size: 1rem;
-  letter-spacing: 0.07em;
-  margin-top: 0.4rem;
-}
-
