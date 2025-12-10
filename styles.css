@@ -119,7 +119,7 @@ body {
 .hero-gallery {
   display: flex;
   justify-content: center;
-  align-items: center;   /* 👈 centers them vertically */
+  align-items: center;   /* ðŸ‘ˆ centers them vertically */
   gap: 0;
   margin-bottom: 1.75rem;
   flex-wrap: nowrap;
@@ -132,7 +132,7 @@ body {
   height: auto;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
   position: relative;
-  transform-origin: center center;  /* 👈 center instead of bottom */
+  transform-origin: center center;  /* ðŸ‘ˆ center instead of bottom */
 }
 
 .hero-image:nth-child(1) {
@@ -253,7 +253,7 @@ body {
 .site-footer {
   border-top: 2px solid #111;
   padding: 1.3rem 0 1.6rem;
-  background: #fff;
+  background: #f45b3d;
 }
 
 .footer-inner {
@@ -482,16 +482,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3rem;              /* space between boxes */
+  gap: 3rem;            
   min-width: max-content;
 }
 
-/* each red box – same size */
+/* each red box â€“ same size */
 .process-step {
   background: #f45b3d;
   color: #fff;
-  width: 230px;           /* all the same width */
-  height: 80px;           /* all the same height */
+  width: 230px;          
+  height: 80px;    
   padding: 0 1.2rem;
   font-family: "Oswald", sans-serif;
   font-size: 0.9rem;
@@ -605,4 +605,223 @@ body {
   .process-step::before {
     display: none; 
   }
+}
+/* ===========================
+   WORK PAGE
+   =========================== */
+
+.work-page {
+  background-color: #fffaf5;
+}
+
+/* position blobs like your Figma */
+.work-page .blob-left {
+  top: 140px;
+  left: -150px;
+}
+
+.work-page .blob-right {
+  bottom: 220px;
+  right: -160px;
+}
+
+/* hero headings */
+.work-hero {
+  padding-bottom: 3rem;
+}
+
+.work-hero-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.8rem;
+}
+
+.work-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 2.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+.work-subtitle {
+  font-size: 0.95rem;
+  margin-top: 0.4rem;
+  text-align: right;
+}
+
+.section-heading {
+  font-family: "Oswald", sans-serif;
+  font-size: 2.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 1.1rem;
+}
+
+.projects-heading {
+  margin-top: 1.4rem;
+}
+
+/* tabs + search row */
+.work-tabs {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.4rem;
+  margin-bottom: 2.3rem;
+}
+
+.tab-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.tab-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: "Nunito Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.95rem;
+  cursor: default;
+  color: #111;
+}
+
+.tab-link.active {
+  border-bottom: 2px solid #111;
+  padding-bottom: 0.25rem;
+}
+
+/* search icon on the right */
+.work-search {
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 80px;
+}
+
+.search-icon {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #111;
+  border-radius: 50%;
+  position: relative;
+}
+
+.search-icon::after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 2px;
+  background: #111;
+  transform: rotate(45deg);
+  right: -5px;
+  bottom: -1px;
+}
+
+/* cards grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.5rem;
+}
+
+.work-card-image img {
+  width: 100%;
+  display: block;
+}
+
+.work-card-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0.65rem 0 0.4rem;
+}
+
+.work-card-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* spacing between sections */
+.work-exercises {
+  padding: 3.8rem 0 4rem;
+}
+
+.exercises-heading {
+  margin-bottom: 1.1rem;
+}
+
+/* bottom glow sits under right exercises grid */
+.work-exercises {
+  position: relative;
+}
+
+.work-exercises::before {
+  content: "";
+  position: absolute;
+  right: 5%;
+  bottom: 60px;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #f45b3d 0%, rgba(244, 91, 61, 0) 65%);
+  opacity: 0.7;
+  z-index: 0;
+}
+
+.exercises-grid {
+  position: relative;
+  z-index: 1;
+}
+
+/* responsive tweaks */
+@media (max-width: 900px) {
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-hero-header {
+    justify-content: flex-start;
+  }
+
+  .work-title,
+  .work-subtitle {
+    text-align: left;
+  }
+
+  .work-tabs {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .work-search {
+    align-self: flex-end;
+    width: 100%;
+  }
+	
+	/* reflection bits inside cards */
+	.work-card-ref-heading {
+	  font-family: "Oswald", sans-serif;
+	  font-size: 0.8rem;
+	  text-transform: uppercase;
+	  letter-spacing: 0.12em;
+	  margin-top: 0.8rem;
+	  margin-bottom: 0.25rem;
+	}
+
+	.work-card-ref {
+	  font-size: 0.85rem;
+	  line-height: 1.6;
+	}
+
 }
