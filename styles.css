@@ -904,6 +904,52 @@ body {
   font-size: 0.8rem;
   line-height: 1.7;
 }
+/* ---------- IMAGE GALLERY / SLIDER ---------- */
+
+.image-gallery {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-gallery img {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+.image-gallery img.active {
+  display: block;
+}
+
+.gallery-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  font-size: 1.6rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 999px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.gallery-btn.prev {
+  left: 8px;
+}
+
+.gallery-btn.next {
+  right: 8px;
+}
+
+.gallery-btn:hover {
+  background: rgba(0, 0, 0, 0.65);
+}
 
 
 }
