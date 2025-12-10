@@ -23,7 +23,7 @@ body {
 
 /* BLOBS */
 .blob {
-  position: fixed;
+  position: absolute; 
   width: 420px;
   height: 420px;
   border-radius: 50%;
@@ -175,7 +175,7 @@ body {
 .overview {
   border-top: 2px solid #111;
   border-bottom: 2px solid #111;
-  background: #fff;
+  background: transparent;
   padding: 3rem 0 2.5rem;
   margin-top: 2.5rem;
 }
@@ -206,25 +206,22 @@ body {
   gap: 2rem;
 }
 
+/* HOME: make explore cards blend into page */
 .explore-card {
-  background: #fff;
-  padding: 1.5rem 1.6rem 1.8rem;
-  border-radius: 4px;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
-  border: 1px solid rgba(0, 0, 0, 0.065);
+  background: transparent;     /* no white box */
+  box-shadow: none;            /* no drop shadow */
+  border: none;                /* no subtle border */
+  padding: 0;                  /* remove extra white “box” spacing */
+  margin-bottom: 2.5rem;       /* keep some vertical breathing room */
 }
 
+
+
+/* HOME: remove red pill headers on cards */
 .card-tag {
-  display: inline-block;
-  padding: 0.35rem 0.9rem;
-  background: #f45b3d;
-  color: #fff;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  border-radius: 999px;
-  margin-bottom: 0.9rem;
+  display: none;
 }
+
 
 .card-title {
   font-family: "Oswald", sans-serif;
@@ -281,7 +278,6 @@ body {
 .footer-copy {
   font-size: 0.85rem;
 }
-
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .hero-title {
