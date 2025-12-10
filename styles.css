@@ -14,14 +14,12 @@ body {
   background-color: #fffaf5;
   line-height: 1.6;
 
-  /* NEW: keep the page from being wider than the screen */
   position: relative;
   max-width: 100%;
   overflow-x: hidden;
 }
 
 
-/* LAYOUT UTILITIES */
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -29,13 +27,13 @@ body {
 }
 
 .blob {
-  position: absolute;   /* was: fixed */
+  position: absolute; 
   width: 420px;
   height: 420px;
   border-radius: 50%;
   background: radial-gradient(circle, #f45b3d 0%, rgba(244, 91, 61, 0) 65%);
-  z-index: -1;          /* stays behind all text */
-  pointer-events: none; /* just in case */
+  z-index: -1;
+  pointer-events: none; 
 }
 
 
@@ -133,21 +131,20 @@ body {
   margin-bottom: 1.75rem;
   flex-wrap: nowrap;
 
-  /* NEW: stop it from creating extra page width */
-  overflow: hidden;      /* clips the part that hangs off to the side */
-  max-width: 100%;       /* never wider than the viewport/container */
-  margin-inline: auto;   /* keep it centered */
+  overflow: hidden; 
+  max-width: 100%;  
+  margin-inline: auto;   
 }
 
 
 
 .hero-image {
-  width: 260px;          /* base size */
+  width: 260px;      
   max-width: 100%;
   height: auto;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
   position: relative;
-  transform-origin: center center;  /* ðŸ‘ˆ center instead of bottom */
+  transform-origin: center center; 
 }
 
 .hero-image:nth-child(1) {
@@ -221,18 +218,18 @@ body {
   gap: 2rem;
 }
 
-/* HOME: make explore cards blend into page */
+/* HOME:*/
 .explore-card {
-  background: transparent;     /* no white box */
-  box-shadow: none;            /* no drop shadow */
-  border: none;                /* no subtle border */
-  padding: 0;                  /* remove extra white “box” spacing */
-  margin-bottom: 2.5rem;       /* keep some vertical breathing room */
+  background: transparent;   
+  box-shadow: none;  
+  border: none;      
+  padding: 0;        
+  margin-bottom: 2.5rem;      
 }
 
 
 
-/* HOME: remove red pill headers on cards */
+/* HOME*/
 .card-tag {
   display: none;
 }
@@ -426,7 +423,7 @@ body {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2.5rem;
   position: relative;
-  z-index: 1;   /* text above the glow */
+  z-index: 1; 
 }
 
 
@@ -468,7 +465,7 @@ body {
 
 
 .process-page {
-  background-color: #fffaf5; /* beige like home */
+  background-color: #fffaf5; 
 }
 
 /* title + intro */
@@ -498,7 +495,6 @@ body {
   min-width: max-content;
 }
 
-/* each red box â€“ same size */
 .process-step {
   background: #f45b3d;
   color: #fff;
@@ -540,7 +536,6 @@ body {
   border-bottom: 4px solid transparent;
 }
 
-/* last box: no connector */
 .process-step:last-child::before,
 .process-step:last-child::after {
   display: none;
@@ -550,19 +545,19 @@ body {
 
 .process-body {
   padding-bottom: 3.5rem;
-  position: relative;           /* for glow */
+  position: relative; 
 }
 
 .process-body::before {
   content: "";
   position: absolute;
   right: 8%;
-  top: 220px;    /* move it up so it sits behind bottom-right of box */
+  top: 220px;   
   width: 380px;
   height: 380px;
   border-radius: 50%;
   background: radial-gradient(circle, #f45b3d 0%, rgba(244, 91, 61, 0) 65%);
-  opacity: 0.85;  /* more opaque */
+  opacity: 0.85; 
   z-index: 0;
 }
 
@@ -577,12 +572,12 @@ body {
 }
 
 
-/* make sure no words are red */
+
 .process-accent {
   color: inherit !important;
 }
 
-/* remove any leftover pink gradient behind paragraphs */
+
 .process-highlight-paragraph::before {
   content: none !important;
 }
@@ -624,7 +619,7 @@ body {
   position: relative;
 }
 
-/* blobs for WORK page */
+
 .work-page .blob-left {
   position: absolute;
   top: 140px;
@@ -635,7 +630,7 @@ body {
   display: none;
 }
 
-/* HERO: big WORK heading + subtitle */
+/* HERO: */
 .work-hero-header {
   text-align: center;
   margin: 3.5rem auto 3rem;
