@@ -3,25 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <title>Container – Work</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Google fonts -->
+  <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Nunito:wght@300;400;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600&family=Oswald:wght@400;600;700&display=swap"
     rel="stylesheet"
   />
-
-  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="site-body">
 
-  <!-- HEADER -->
+<body class="work-page">
+  <div class="blob blob-left"></div>
+  <div class="blob blob-right"></div>
+
+  <!-- ===== HEADER ===== -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="logo">CONTAINER</div>
-
       <nav class="main-nav">
         <a href="index.html" class="nav-link">Home</a>
         <a href="work.html" class="nav-link active">Work</a>
@@ -31,354 +29,302 @@
     </div>
   </header>
 
-  <!-- BLOBS -->
-  <div class="blob blob-left"></div>
-  <div class="blob blob-right"></div>
+  <!-- ===== MAIN ===== -->
+  <main>
+    <div class="container">
+      <!-- Work hero -->
+      <section class="work-hero">
+        <div class="work-hero-header">
+          <h1 class="work-title">WORK</h1>
+          <p class="work-subtitle">All work I have done in class</p>
+        </div>
+      </section>
 
-  <!-- MAIN CONTENT -->
-  <main class="container work-page">
+      <!-- ===================== PROJECTS ===================== -->
+      <section class="work-projects">
+        <h2 class="section-heading projects-heading">Projects</h2>
 
-    <!-- HERO -->
-    <header class="work-hero-header">
-      <h1 class="work-title">WORK</h1>
-      <p class="work-subtitle">Some work I have done in class</p>
-    </header>
+        <div class="card-grid">
+          <!-- Project 1 -->
+          <article class="work-card">
+            <div class="work-card-image image-gallery" data-group="project1">
+              <button class="gallery-btn prev" type="button">&#8249;</button>
+              <button class="gallery-btn next" type="button">&#8250;</button>
 
-    <!-- PROJECTS -------------------------------------------------- -->
-    <section class="projects-section">
-      <h2 class="section-heading">Projects</h2>
-
-      <div class="card-grid">
-
-        <!-- PROJECT 1 -------------------------------------------------->
-        <article class="work-card">
-          <div class="work-card-image">
-            <div class="image-gallery">
-              <button class="gallery-btn prev" aria-label="Previous image">‹</button>
-              <button class="gallery-btn next" aria-label="Next image">›</button>
-
-              <img src="img/project1p1.png" alt="Project 1 daily cherry poster 1" />
-              <img src="img/project1p2.png" alt="Project 1 daily cherry poster 2" />
-              <img src="img/project1p3.png" alt="Project 1 daily cherry poster 3" />
-              <img src="img/project1p4.png" alt="Project 1 daily cherry poster 4" />
-              <img src="img/project1p5.png" alt="Project 1 daily cherry poster 5" />
-              <img src="img/project1p6.png" alt="Project 1 daily cherry poster 6" />
-              <img src="img/project1p7.png" alt="Project 1 daily cherry poster 7" />
-              <img src="img/project1p8.png" alt="Project 1 daily cherry poster 8" />
-              <img src="img/project1p9.png" alt="Project 1 daily cherry poster 9" />
-              <img src="img/project1p10.png" alt="Project 1 daily cherry poster 10" />
+              <img src="img/project1p1.png" alt="Project 1 poster 1" class="active" />
+              <img src="img/project1p2.png" alt="Project 1 poster 2" />
+              <img src="img/project1p3.png" alt="Project 1 poster 3" />
+              <img src="img/project1p4.png" alt="Project 1 poster 4" />
+              <img src="img/project1p5.png" alt="Project 1 poster 5" />
+              <img src="img/project1p6.png" alt="Project 1 poster 6" />
+              <img src="img/project1p7.png" alt="Project 1 poster 7" />
+              <img src="img/project1p8.png" alt="Project 1 poster 8" />
+              <img src="img/project1p9.png" alt="Project 1 poster 9" />
+              <img src="img/project1p10.png" alt="Project 1 poster 10" />
             </div>
-          </div>
 
-          <div class="work-card-body">
-            <h3 class="work-card-title">Project 1 – Daily Poster Series “Rualiious”</h3>
-            <p class="work-card-text">
-              14 daily posters built around a consistent cherry motif. Each poster explores a
-              different visual direction while keeping the same format, theme, and conceptual
-              framework.
-            </p>
-            <h4 class="work-card-ref-heading">Reflection</h4>
-            <p class="work-card-ref">
-              Project 1 was the first time I had to design on a strict daily schedule, and it
-              ended up teaching me more about discipline than anything else. Creating something
-              new every day forced me to let go of overthinking and just make decisions, even
-              when I wasn’t feeling creative. I experimented a lot with colors, typography,
-              illustration styles, and compositions, and started noticing what I naturally
-              gravitated toward.
-            </p>
-            <p class="work-card-ref">
-              Some posters came out cleaner and more intentional, while others felt chaotic or
-              unresolved, but the mix helped me figure out which directions were worth
-              pursuing. By the end, I was more comfortable taking risks, trusting my eye, and
-              committing to an idea instead of restarting over and over. I also learned how
-              setting rules for myself (format, theme, and motifs) actually made the creative
-              part easier.
-            </p>
-          </div>
-        </article>
-
-        <!-- PROJECT 2 -------------------------------------------------->
-        <article class="work-card">
-          <div class="work-card-image">
-            <!-- single image, no arrows needed but can keep wrapper for consistency -->
-            <div class="image-gallery">
-              <img src="img/project2.png"
-                   alt="Project 2 HAL monologue composition" class="active" />
+            <div class="work-card-body">
+              <h3 class="work-card-title">Project 1 – Daily Poster Series “Rualiiious”</h3>
+              <p class="work-card-text">
+                14 daily poster designs built around a consistent cherry motif. Each poster explores a
+                different visual direction while maintaining the same theme, format, and conceptual
+                framework.
+              </p>
+              <h4 class="work-card-ref-heading">Reflection</h4>
+              <p class="work-card-ref">
+                Project 1 was the first time I had to design on a strict daily schedule, and it ended up
+                teaching me more about discipline than anything else. Creating something new every day
+                forced me to let go of overthinking and just make decisions, even when I wasn’t feeling
+                creative. I experimented a lot, different colors, typography, illustration styles, and
+                compositions, and I started noticing what I naturally gravitated toward.
+              </p>
+              <p class="work-card-ref">
+                Some posters came out cleaner and more intentional, while others felt chaotic or unresolved,
+                but the mix helped me figure out what directions were worth pursuing. By the end of the
+                project, I was more comfortable taking risks, trusting my eye, and committing to an idea
+                instead of restarting over and over. I also learned how helpful it is to set rules for
+                myself (like format, theme, or visual motifs) because those constraints actually made the
+                creative part easier.
+              </p>
             </div>
-          </div>
+          </article>
 
-          <div class="work-card-body">
-            <h3 class="work-card-title">
-              Project 2 – Type as Text &amp; Type as Image (HAL Monologue)
-            </h3>
-            <p class="work-card-text">
-              A nine-sheet typographic composition using HAL’s shutdown monologue. One side
-              uses type as image; the other focuses on type as text, arranged across a larger grid.
-            </p>
-            <h4 class="work-card-ref-heading">Reflection</h4>
-            <p class="work-card-ref">
-              For this project, I liked the direction I chose and how the final design looked on
-              screen. The monologue gave me a clear emotion to work from, so it was easier to
-              push the typography instead of treating it like a normal layout.
-            </p>
-            <p class="work-card-ref">
-              The text side helped me understand how a bigger grid works. I adjusted column
-              widths, leading, and spacing until the monologue felt readable but still had
-              movement. Printing the nine sheets taught me how important it is to think about
-              the physical version early—some details fell in the gaps between pages and didn’t
-              line up the way I expected.
-            </p>
-          </div>
-        </article>
+          <!-- Project 2 -->
+          <article class="work-card">
+            <div class="work-card-image image-gallery" data-group="project2">
+              <button class="gallery-btn prev" type="button">&#8249;</button>
+              <button class="gallery-btn next" type="button">&#8250;</button>
 
-        <!-- PROJECT 3 -------------------------------------------------->
-        <article class="work-card">
-          <div class="work-card-image">
-            <div class="image-gallery">
-              <button class="gallery-btn prev" aria-label="Previous image">‹</button>
-              <button class="gallery-btn next" aria-label="Next image">›</button>
-
-              <img src="img/project3p1.png" alt="WAVE zine spread 1" />
-              <img src="img/project3p2.png" alt="WAVE zine spread 2" />
-              <img src="img/project3p3.png" alt="WAVE zine spread 3" />
-              <img src="img/project3p4.png" alt="WAVE zine spread 4" />
-              <img src="img/project3p5.png" alt="WAVE zine spread 5" />
-              <img src="img/project3p6.png" alt="WAVE zine spread 6" />
+              <img src="img/project2.png" alt="Project 2 – HAL monologue type composition" class="active" />
             </div>
-          </div>
 
-          <div class="work-card-body">
-            <h3 class="work-card-title">Project 3 – WAVE Zine</h3>
-            <p class="work-card-text">
-              A 12-page zine exploring different meanings of the word “wave” through limited
-              color, type systems, and pacing across multiple spreads.
-            </p>
-            <h4 class="work-card-ref-heading">Reflection</h4>
-            <p class="work-card-ref">
-              Project 3 was the hardest to start. Even after choosing “wave,” I wasn’t sure how
-              to turn the idea into a full set of pages. Working with only a few colors and
-              typefaces made the decisions feel more strict, so I had to rely on structure
-              instead of decoration.
-            </p>
-            <p class="work-card-ref">
-              As I built the spreads, I started using everything from earlier in the semester:
-              grids to hold the system together, hierarchy to pace the content, and the texture
-              exercises to control contrast and density. Some pages came out exactly how I
-              wanted and others were harder to resolve, but this project helped me see how all
-              the small exercises connect when you’re working on a larger system.
-            </p>
-          </div>
-        </article>
+            <div class="work-card-body">
+              <h3 class="work-card-title">Project 2 – Type as Text &amp; Type as Image</h3>
+              <p class="work-card-text">
+                A nine-sheet typographic composition using HAL’s shutdown monologue. I combined type as text
+                and type as image to express tension, emotion, breakdown, and hierarchy across multiple
+                sheets.
+              </p>
+              <h4 class="work-card-ref-heading">Reflection</h4>
+              <p class="work-card-ref">
+                For this project, I liked the direction I chose and how the final design looked on screen.
+                Working with the HAL shutdown monologue gave me a clear emotion to work from, so it was
+                easier to push the type visually instead of treating it like a normal layout. The
+                image-based sheets were fun to build because I could distort the letters and use scale and
+                color to show the tension in the scene.
+              </p>
+              <p class="work-card-ref">
+                The text side of the project helped me understand how a larger grid works. I tried different
+                column widths and spacing until the monologue felt readable but still had some movement
+                across the page. When I finally printed the nine sheets, I realized I should have planned
+                for the gaps between the pages. That taught me how important it is to think about the
+                physical version early in the process.
+              </p>
+            </div>
+          </article>
 
-      </div><!-- /.card-grid -->
-    </section>
+          <!-- Project 3 -->
+          <article class="work-card">
+            <div class="work-card-image image-gallery" data-group="project3">
+              <button class="gallery-btn prev" type="button">&#8249;</button>
+              <button class="gallery-btn next" type="button">&#8250;</button>
 
-    <!-- EXERCISES -------------------------------------------------- -->
-    <section class="exercises-section">
-      <h2 class="section-heading">Exercises</h2>
+              <img src="img/project3p1.png" alt="Project 3 Wave zine spread 1" class="active" />
+              <img src="img/project3p2.png" alt="Project 3 Wave zine spread 2" />
+              <img src="img/project3p3.png" alt="Project 3 Wave zine spread 3" />
+              <img src="img/project3p4.png" alt="Project 3 Wave zine spread 4" />
+              <img src="img/project3p5.png" alt="Project 3 Wave zine spread 5" />
+              <img src="img/project3p6.png" alt="Project 3 Wave zine spread 6" />
+            </div>
 
-      <div class="card-grid">
+            <div class="work-card-body">
+              <h3 class="work-card-title">Project 3 – WAVE Zine</h3>
+              <p class="work-card-text">
+                A 12-page zine exploring different meanings of the word “wave” through layout, limited
+                color, and typographic systems. Sequencing and pacing were key to how the narrative
+                progressed.
+              </p>
+              <h4 class="work-card-ref-heading">Reflection</h4>
+              <p class="work-card-ref">
+                Project 3 was the hardest project for me to get started. Even after choosing “wave,” I
+                wasn’t sure how to turn the idea into a full set of pages. Working with only a few colors
+                and typefaces made the decisions feel more strict, so I had to rely on structure instead of
+                decoration.
+              </p>
+              <p class="work-card-ref">
+                As I built the spreads, I noticed how much I was using what we learned earlier in the
+                semester. The grid helped hold everything together, hierarchy guided the pacing, and the
+                texture exercises made me think more about contrast and density. Some pages came out exactly
+                how I wanted and others were harder to resolve, but this was the project where I really saw
+                how all the earlier exercises connect when you’re working on a larger system.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
 
-        <!-- EXERCISE 1 -------------------------------------------------->
-        <article class="work-card">
-          <div class="work-card-image">
-            <div class="image-gallery">
-              <button class="gallery-btn prev" aria-label="Previous image">‹</button>
-              <button class="gallery-btn next" aria-label="Next image">›</button>
+      <!-- ===================== EXERCISES ===================== -->
+      <section class="work-exercises">
+        <h2 class="section-heading exercises-heading">Exercises</h2>
 
-              <img src="img/ex1p1.png" alt="Exercise 1 point line plane 1" />
+        <div class="card-grid exercises-grid">
+          <!-- Exercise 1 -->
+          <article class="work-card">
+            <div class="work-card-image image-gallery" data-group="ex1">
+              <button class="gallery-btn prev" type="button">&#8249;</button>
+              <button class="gallery-btn next" type="button">&#8250;</button>
+
+              <img src="img/ex1p1.png" alt="Exercise 1 point line plane 1" class="active" />
               <img src="img/ex1p2.png" alt="Exercise 1 point line plane 2" />
               <img src="img/ex1p3.png" alt="Exercise 1 point line plane 3" />
             </div>
-          </div>
 
-          <div class="work-card-body">
-            <h3 class="work-card-title">Exercise 1 – Point, Line, Plane</h3>
-            <p class="work-card-text">
-              5"×7" compositions translating photographs into abstract arrangements of points,
-              lines, and planes.
-            </p>
-            <h4 class="work-card-ref-heading">Reflection</h4>
-            <p class="work-card-ref">
-              This was one of the first exercises we did, and it ended up being way more fun
-              than I expected. Translating simple photos into pure points, lines, and planes
-              forced me to stop thinking about “objects” and focus on structure instead. I had
-              to pay attention to angles, spacing, and how shapes interact without relying on
-              color or detail.
-            </p>
-            <p class="work-card-ref">
-              It was a good reminder that composition comes first, not decoration. This stuck
-              with me throughout the semester and made me more aware of underlying shapes and
-              grids in later projects, especially typography and the multi-page work.
-            </p>
-          </div>
-        </article>
-
-        <!-- EXERCISE 2 -------------------------------------------------->
-        <article class="work-card">
-          <div class="work-card-image">
-            <div class="image-gallery">
-              <button class="gallery-btn prev" aria-label="Previous image">‹</button>
-              <button class="gallery-btn next" aria-label="Next image">›</button>
-
-              <img src="img/ex2p1.png" alt="Exercise 2 rhythm & balance 1" />
-              <img src="img/ex2p2.png" alt="Exercise 2 rhythm & balance 2" />
-              <img src="img/ex2p3.png" alt="Exercise 2 rhythm & balance 3" />
-              <img src="img/ex2p4.png" alt="Exercise 2 rhythm & balance 4" />
-              <img src="img/ex2p5.png" alt="Exercise 2 rhythm & balance 5" />
-              <img src="img/ex2p6.png" alt="Exercise 2 rhythm & balance 6" />
-              <img src="img/ex2p7.png" alt="Exercise 2 rhythm & balance 7" />
-              <img src="img/ex2p8.png" alt="Exercise 2 rhythm & balance 8" />
+            <div class="work-card-body">
+              <h3 class="work-card-title">Exercise 1 – Point, Line, Plane</h3>
+              <h4 class="work-card-ref-heading">Reflection</h4>
+              <p class="work-card-ref">
+                This was one of the first exercises we did, and it ended up being way more fun than I
+                expected. Translating simple photos into pure points, lines, and planes forced me to stop
+                thinking about “objects” and focus on structure instead. I had to pay attention to angles,
+                spacing, and how shapes interact without relying on color or detail.
+              </p>
+              <p class="work-card-ref">
+                It was a good reminder that composition comes first, not decoration. This exercise also
+                stuck with me throughout the semester, because it made me more aware of underlying shapes
+                and grids in every project after this, especially once we got into typography and
+                multi-page layouts.
+              </p>
             </div>
-          </div>
+          </article>
 
-          <div class="work-card-body">
-            <h3 class="work-card-title">Exercise 2 – Rhythm &amp; Balance</h3>
-            <p class="work-card-text">
-              Symmetric and asymmetric compositions built only from letters of one typeface,
-              focusing on scale, repetition, and spacing.
-            </p>
-            <h4 class="work-card-ref-heading">Reflection</h4>
-            <p class="work-card-ref">
-              This exercise pushed my creativity more than I expected. At first I didn’t feel
-              like my ideas were very interesting, especially with such limited material. But
-              working through the pairs forced me to pay attention to stroke weight, spacing,
-              and how the same pieces feel completely different depending on arrangement.
-            </p>
-            <p class="work-card-ref">
-              Even though I wasn’t in love with every composition, it helped me loosen up and
-              think beyond the literal meaning of letterforms. The practice with movement and
-              structure became really useful later in the poster projects and the zine.
-            </p>
-          </div>
-        </article>
+          <!-- Exercise 2 -->
+          <article class="work-card">
+            <div class="work-card-image image-gallery" data-group="ex2">
+              <button class="gallery-btn prev" type="button">&#8249;</button>
+              <button class="gallery-btn next" type="button">&#8250;</button>
 
-        <!-- EXERCISE 3 / 7 (single image placeholder, update filename if needed) -->
-        <article class="work-card">
-          <div class="work-card-image">
-            <div class="image-gallery">
-              <img src="img/ex7.png" alt="Exercise 7 photographed letters" class="active" />
+              <img src="img/ex2p1.png" alt="Exercise 2 rhythm and balance 1" class="active" />
+              <img src="img/ex2p2.png" alt="Exercise 2 rhythm and balance 2" />
+              <img src="img/ex2p3.png" alt="Exercise 2 rhythm and balance 3" />
+              <img src="img/ex2p4.png" alt="Exercise 2 rhythm and balance 4" />
+              <img src="img/ex2p5.png" alt="Exercise 2 rhythm and balance 5" />
+              <img src="img/ex2p6.png" alt="Exercise 2 rhythm and balance 6" />
+              <img src="img/ex2p7.png" alt="Exercise 2 rhythm and balance 7" />
+              <img src="img/ex2p8.png" alt="Exercise 2 rhythm and balance 8" />
             </div>
-          </div>
 
-          <div class="work-card-body">
-            <h3 class="work-card-title">Exercise 7 – Photographed Letters</h3>
-            <p class="work-card-text">
-              A series of photographed letters where traditional counters become figure and
-              ground, exploring shape, texture, and legibility.
-            </p>
-            <!-- You can add a reflection paragraph here later if you want -->
-          </div>
-        </article>
-
-        <!-- EXERCISE 4 -------------------------------------------------->
-        <article class="work-card">
-          <div class="work-card-image">
-            <div class="image-gallery">
-              <button class="gallery-btn prev" aria-label="Previous image">‹</button>
-              <button class="gallery-btn next" aria-label="Next image">›</button>
-
-              <img src="img/ex4p1.jpeg" alt="Exercise 4 grid and cut paper 1" />
-              <img src="img/ex4p2.jpeg" alt="Exercise 4 grid and cut paper 2" />
-              <img src="img/ex4p3.jpeg" alt="Exercise 4 grid and cut paper 3" />
-              <img src="img/ex4p4.jpeg" alt="Exercise 4 grid and cut paper 4" />
+            <div class="work-card-body">
+              <h3 class="work-card-title">Exercise 2 – Rhythm &amp; Balance</h3>
+              <h4 class="work-card-ref-heading">Reflection</h4>
+              <p class="work-card-ref">
+                This exercise pushed my creativity more than I expected. At first I didn’t feel like my
+                ideas were very interesting, especially since we were only allowed to use letters from one
+                typeface. But working through the symmetric and asymmetric pairs forced me to pay attention
+                to small decisions—the weight of a stroke, spacing, and how repetition creates rhythm.
+              </p>
+              <p class="work-card-ref">
+                Even though I wasn’t in love with every composition I made, the assignment helped me loosen
+                up and start thinking beyond the literal meaning of letterforms. It taught me how much
+                movement and structure you can create just by adjusting scale, repetition, and alignment.
+                That ended up being really useful later in the semester, especially in the poster project
+                and the zine.
+              </p>
             </div>
-          </div>
+          </article>
 
-          <div class="work-card-body">
-            <h3 class="work-card-title">Exercise 4 – Grid &amp; Cut Paper</h3>
-            <p class="work-card-text">
-              Four compositions built from cut paper and type on a strict grid system.
-            </p>
-            <h4 class="work-card-ref-heading">Reflection</h4>
-            <p class="work-card-ref">
-              Exercise 4 was one of the hardest assignments for me. Working with a strict grid
-              and cut paper felt awkward, and I wasn’t very happy with how my pieces looked at
-              the time. But it forced me to pay close attention to alignment, spacing, and how
-              each element interacted with the grid.
-            </p>
-            <p class="work-card-ref">
-              Later in the semester I realized how much it shaped the way I worked. It made me
-              more careful with layout and helped me see how structure can support a design
-              instead of limiting it.
-            </p>
-          </div>
-        </article>
+          <!-- Exercise 4 -->
+          <article class="work-card">
+            <div class="work-card-image image-gallery" data-group="ex4">
+              <button class="gallery-btn prev" type="button">&#8249;</button>
+              <button class="gallery-btn next" type="button">&#8250;</button>
 
-        <!-- EXERCISE 5 -------------------------------------------------->
-        <article class="work-card">
-          <div class="work-card-image">
-            <div class="image-gallery">
-              <button class="gallery-btn prev" aria-label="Previous image">‹</button>
-              <button class="gallery-btn next" aria-label="Next image">›</button>
-
-              <img src="img/ex5p1.png" alt="Exercise 5 hierarchy 1" />
-              <img src="img/ex5p2.png" alt="Exercise 5 hierarchy 2" />
-              <img src="img/ex5p3.png" alt="Exercise 5 hierarchy 3" />
+              <img src="img/ex4p1.jpeg" alt="Exercise 4 grid cut paper 1" class="active" />
+              <img src="img/ex4p2.jpeg" alt="Exercise 4 grid cut paper 2" />
+              <img src="img/ex4p3.jpeg" alt="Exercise 4 grid cut paper 3" />
+              <img src="img/ex4p4.jpeg" alt="Exercise 4 grid cut paper 4" />
             </div>
-          </div>
 
-          <div class="work-card-body">
-            <h3 class="work-card-title">Exercise 5 – Hierarchy</h3>
-            <p class="work-card-text">
-              8.5"×11" layouts for a lecture series poster, created using only typography
-              and grid-based hierarchy.
-            </p>
-            <h4 class="work-card-ref-heading">Reflection</h4>
-            <p class="work-card-ref">
-              Exercise 5 was the first time the grid started working for me instead of against
-              me. I tried different ways of organizing the information and saw how small
-              changes in size or placement affected how people read the page.
-            </p>
-            <p class="work-card-ref">
-              I liked how these turned out because they feel much cleaner than my earlier grid
-              work. This exercise made me more confident with type and hierarchy, and I used
-              a lot of what I learned here in the 2001 project and the zine.
-            </p>
-          </div>
-        </article>
-
-        <!-- EXERCISE 11 -------------------------------------------------->
-        <article class="work-card">
-          <div class="work-card-image">
-            <div class="image-gallery">
-              <button class="gallery-btn prev" aria-label="Previous image">‹</button>
-              <button class="gallery-btn next" aria-label="Next image">›</button>
-
-              <img src="img/ex11p1.png" alt="Exercise 11 text texture 1" />
-              <img src="img/ex11p2.png" alt="Exercise 11 text texture 2" />
-              <img src="img/ex11p3.png" alt="Exercise 11 text texture 3" />
-              <img src="img/ex11p4.png" alt="Exercise 11 text texture 4" />
-              <img src="img/ex11p5.png" alt="Exercise 11 text texture 5" />
-              <img src="img/ex11p6.png" alt="Exercise 11 text texture 6" />
+            <div class="work-card-body">
+              <h3 class="work-card-title">Exercise 4 – Grids &amp; Cut Paper</h3>
+              <h4 class="work-card-ref-heading">Reflection</h4>
+              <p class="work-card-ref">
+                Exercise 4 was one of the hardest assignments for me. Working with a strict grid and cut
+                paper felt awkward, and I wasn’t very happy with how my pieces looked in the end. Even so,
+                it taught me something important. I had to pay close attention to alignment, spacing, and
+                how each element interacted with the grid.
+              </p>
+              <p class="work-card-ref">
+                Later in the semester, I realized how much this exercise shaped the way I worked. It made me
+                more careful with layout and helped me understand how structure can support a design instead
+                of limiting it.
+              </p>
             </div>
-          </div>
+          </article>
 
-          <div class="work-card-body">
-            <h3 class="work-card-title">Exercise 11 – Text Texture</h3>
-            <p class="work-card-text">
-              Six 10"×10" typographic compositions exploring texture using alignment,
-              leading, density, and blocks of text.
-            </p>
-            <h4 class="work-card-ref-heading">Reflection</h4>
-            <p class="work-card-ref">
-              For this exercise, I focused on how blocks of text create weight and rhythm on a
-              page. Working with justified and flush-left text made me pay closer attention to
-              spacing and texture while keeping everything readable.
-            </p>
-            <p class="work-card-ref">
-              It helped me see text as visual material, not just something to read, and that
-              mindset carried into how I approached later typography projects and spreads.
-            </p>
-          </div>
-        </article>
+          <!-- Exercise 5 -->
+          <article class="work-card">
+            <div class="work-card-image image-gallery" data-group="ex5">
+              <button class="gallery-btn prev" type="button">&#8249;</button>
+              <button class="gallery-btn next" type="button">&#8250;</button>
 
-      </div><!-- /.card-grid -->
-    </section>
+              <img src="img/ex5p1.png" alt="Exercise 5 hierarchy layout 1" class="active" />
+              <img src="img/ex5p2.png" alt="Exercise 5 hierarchy layout 2" />
+              <img src="img/ex5p3.png" alt="Exercise 5 hierarchy layout 3" />
+            </div>
 
+            <div class="work-card-body">
+              <h3 class="work-card-title">Exercise 5 – Hierarchy</h3>
+              <h4 class="work-card-ref-heading">Reflection</h4>
+              <p class="work-card-ref">
+                Exercise 5 was the first time I felt like the grid actually started working for me instead
+                of against me. I spent most of the time trying different ways to organize the information
+                and seeing how small changes in size or placement affected the flow of the page.
+              </p>
+              <p class="work-card-ref">
+                I liked how these turned out because they feel much cleaner than the earlier grids. This
+                exercise made me pay attention to alignment, spacing, and how people read a page. I used
+                what I learned here in the later projects, especially the 2001 project, where hierarchy and
+                pacing mattered a lot.
+              </p>
+            </div>
+          </article>
+
+          <!-- Exercise 11 -->
+          <article class="work-card">
+            <div class="work-card-image image-gallery" data-group="ex11">
+              <button class="gallery-btn prev" type="button">&#8249;</button>
+              <button class="gallery-btn next" type="button">&#8250;</button>
+
+              <img src="img/ex11p1.png" alt="Exercise 11 texture type 1" class="active" />
+              <img src="img/ex11p2.png" alt="Exercise 11 texture type 2" />
+              <img src="img/ex11p3.png" alt="Exercise 11 texture type 3" />
+              <img src="img/ex11p4.png" alt="Exercise 11 texture type 4" />
+              <img src="img/ex11p5.png" alt="Exercise 11 texture type 5" />
+              <img src="img/ex11p6.png" alt="Exercise 11 texture type 6" />
+            </div>
+
+            <div class="work-card-body">
+              <h3 class="work-card-title">Exercise 11 – Type Texture</h3>
+              <h4 class="work-card-ref-heading">Reflection</h4>
+              <p class="work-card-ref">
+                For this exercise, I focused on how blocks of text create weight and rhythm on a page.
+                Working with justified and flush-left text made me pay closer attention to spacing,
+                texture, and how different alignments change the overall feel of a composition.
+              </p>
+              <p class="work-card-ref">
+                I had to adjust scale, leading, and density so the layouts stayed readable while still
+                forming a strong visual structure. This assignment helped me understand text as a visual
+                material, not just something to read, which carried into how I approached later typography
+                work.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
   </main>
 
-  <!-- FOOTER -->
+  <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <nav class="footer-nav">
@@ -387,44 +333,38 @@
         <a href="reflection.html" class="footer-link">Reflection</a>
         <a href="process.html" class="footer-link">Process</a>
       </nav>
-      <p class="footer-copy">
-        © 2025 Container. Designed by Ruth
-      </p>
+      <p class="footer-copy">© 2025 Container. Designed by Ruth</p>
     </div>
   </footer>
 
-  <!-- SIMPLE GALLERY SCRIPT --------------------------------------- -->
+  <!-- ===== SIMPLE GALLERY SCRIPT ===== -->
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      document.querySelectorAll(".image-gallery").forEach(function (gallery) {
-        const images = gallery.querySelectorAll("img");
-        if (!images.length) return;
+    document.querySelectorAll(".image-gallery").forEach(gallery => {
+      const images = Array.from(gallery.querySelectorAll("img"));
+      const prevBtn = gallery.querySelector(".gallery-btn.prev");
+      const nextBtn = gallery.querySelector(".gallery-btn.next");
+      let index = 0;
 
-        let index = 0;
-        images.forEach(img => img.classList.remove("active"));
-        images[index].classList.add("active");
+      function showImage(i) {
+        images.forEach((img, idx) => {
+          img.classList.toggle("active", idx === i);
+        });
+      }
 
-        function show(newIndex) {
-          images[index].classList.remove("active");
-          index = (newIndex + images.length) % images.length;
-          images[index].classList.add("active");
-        }
+      if (prevBtn && nextBtn && images.length > 1) {
+        prevBtn.addEventListener("click", () => {
+          index = (index - 1 + images.length) % images.length;
+          showImage(index);
+        });
 
-        const prevBtn = gallery.querySelector(".gallery-btn.prev");
-        const nextBtn = gallery.querySelector(".gallery-btn.next");
-
-        if (prevBtn) {
-          prevBtn.addEventListener("click", function () {
-            show(index - 1);
-          });
-        }
-
-        if (nextBtn) {
-          nextBtn.addEventListener("click", function () {
-            show(index + 1);
-          });
-        }
-      });
+        nextBtn.addEventListener("click", () => {
+          index = (index + 1) % images.length;
+          showImage(index);
+        });
+      } else {
+        if (prevBtn) prevBtn.style.display = "none";
+        if (nextBtn) nextBtn.style.display = "none";
+      }
     });
   </script>
 </body>
