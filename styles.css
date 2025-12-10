@@ -551,18 +551,15 @@ body {
 }
 
 
-/* white box itself */
+/* ---- PROCESS PAGE --- */
 .process-text-block {
-  border: 2px solid #111;
-  background: #fff;
-  padding: 1.6rem 1.8rem 1.9rem;
-  max-width: 1000px;
-  margin: 0 auto;
-  font-size: 0.95rem;
-  line-height: 1.75;
-  position: relative;
-  z-index: 1;    /* above the glow */
+  border: none;           
+  background: transparent; 
+  padding: 0;            
+  max-width: 900px;    
+  margin: 0 auto 3rem;     
 }
+
 
 /* make sure no words are red */
 .process-accent {
